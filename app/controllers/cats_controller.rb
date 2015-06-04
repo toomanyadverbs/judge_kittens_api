@@ -1,4 +1,4 @@
-class CatsController < ApplicationController
+class CatsController < OpenReadController
 
   # GET /Cats
 

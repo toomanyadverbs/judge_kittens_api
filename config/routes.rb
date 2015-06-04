@@ -3,9 +3,12 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
 #post '/cats' => 'cats#create'
-get '/Cats' => 'cats#index'
+get '/cats' => 'cats#index'
 
-get '/Cats/:id' => 'cats#show'
+get '/cats/:id' => 'cats#show'
+
+post '/login' => 'auth#login'
+
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
