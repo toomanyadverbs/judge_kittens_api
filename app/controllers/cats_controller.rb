@@ -1,5 +1,6 @@
 class CatsController < OpenReadController
-
+  # TODO: REMOVE THIS AFTER LOGIN IS DONE
+  skip_before_action :authenticate
   # GET /Cats
 
   def index
@@ -16,6 +17,19 @@ class CatsController < OpenReadController
     render json: @cat
   end
 
+  #POST /cats
+
+  # PATCH /movies/:id
+  def update
+    @cat = Cat.find(params[:id])
+    if @cat.update(cat_params)
+      head :no_content
+    else
+      render json: @cat.errors, status: :unprocessable_entity
+    end
+  end
+
+
   # POST /ads
   # def create
   #   @cat = Cat.new(cat_params)
@@ -26,8 +40,10 @@ class CatsController < OpenReadController
   #   end
   # end
 
-  # def cat_params
-  #   params.require(:cat).permit(:name, :pic)
-  # end
+  private
+   def cat_params
+    params.require(:cat)
+      .permit(:name, :owner, :pic, :ct_jdgmts_cute, :ct_wins_cute, :ct_jdgmts_maj, :ct_wins_maj)
+  end
 
 end

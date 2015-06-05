@@ -7,6 +7,8 @@ get '/cats' => 'cats#index'
 
 get '/cats/:id' => 'cats#show'
 
+patch '/cats/:id' => 'cats#update'
+
 post '/login' => 'auth#login'
 
 
