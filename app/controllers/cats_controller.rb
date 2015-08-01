@@ -19,11 +19,13 @@ class CatsController < OpenReadController
 
   #POST /cats
 
-  # PATCH /movies/:id
+  # PATCH /cats/:id
   def update
     @cat = Cat.find(params[:id])
     if @cat.update(cat_params)
       head :no_content
+      #TRY:
+      #render json: @cat
     else
       render json: @cat.errors, status: :unprocessable_entity
     end
