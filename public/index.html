@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
+  <link href="styles/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class ="row"> <!--TITLE-->
+    <div class="col-md-2"></div>
+    <div class="title col-md-8">
+      <h1>Judge <span class="h1straight">the</span> Kitties!</h1>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+  <div class="row"><!--toggle judgement type-->
+    <div class="col-md-2"></div>
+    <div class="cuteToggle selectedJudgement col-md-5 cute">
+      <h4>Judge <span class="h4straight"> by </span> Cuteness</h4>
+    </div>
+    <div class="majToggle col-md-3 maj">
+      <h4>Judge <span class="h4straight"> by </span> Majesty</h4>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+  <div class="row"><!--question-->
+    <div class="col-md-2"></div>
+    <div class="question toggle toggleQuestion cute col-md-8">
+      <h3>⬐ Which cat is cuter? &#11022;</h3>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+<div class="row"> <!--judge cats section-->
+  <div class="col-md-2"></div>
+  <div class="catContainer">
+    <div class="outmost col-md-4 toggle cute">
+    <div class="outer">
+      <img class="framepic" src="imgs/frame_top.png">
+      <div class="frame catOne">
+        <img id="catImgIdOne" src ="">
+        <div class="catLabel" id="catLabelOne">Name:</div>
+        <div class="catLabel" id="catRibbonsOne"></div>
+      </div>
+      <img class="framepic" src="imgs/frame_bottom.png">
+      <br/>
+    </div>
+    </div>
+    <div class="outmost col-md-4 toggle cute">
+    <div class="outer">
+      <img class="framepic" src="imgs/frame_top.png">
+      <div class="frame catTwo">
+        <img id="catImgIdTwo" src ="">
+        <div class="catLabel" id="catLabelTwo">Name:</div>
+        <div class="catLabel" id="catRibbonsTwo"></div>
+      </div>
+      <img class="framepic" src="imgs/frame_bottom.png">
+      <br/>
+    </div>
+    </div>
+  </div>
+  <div class="col-md-2"></div>
+  </div>
+  <div class="row hidden" id="refreshButtonDiv"><!--refreshButton-->
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <button class="refreshButton"><a href="http://localhost:3000/"><h4>Judge Again?</h4></a></button>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="footer col-md-8"><!--footer-->
+      <h4><br/>Created by L Grimes</h4>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+
+  <!--USER AUTH / LOGIN STUFF-->
+  <div id="row">
+     <div class="col-md-2"></div>
+    <div class="footer col-md-8 hidden">
+  <input id="email" type="text" value="" placeholder="e-mail">
+  <input id="password" type="password" value="" placeholder="password">
+  <input id="get-token" type="button" value="Get Token">
+  <br>
+  <label for="token">Token:</label>
+  <input id="token" placeholder="empty">
+  </div>
+  <div class="col-md-2"></div>
+  </div>
+
+<!--SCRIPTS-->
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="scripts/app.js" type="text/javascript"></script>
+  <script src="styles/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
