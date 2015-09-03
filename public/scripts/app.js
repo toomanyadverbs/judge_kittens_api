@@ -32,10 +32,10 @@ var second = randomIntegers.second;
 
 $(document).ready(function() {
 
-  var backEndUrl = 'postgres://hroazprxtptbsx:xfBPaUyRkKncphLYUjN08mFwZ4@ec2-23-23-188-252.compute-1.amazonaws.com:5432/dffsnom9celuqk/'
-  var catUrl = backEndUrl + 'cats/'
+  var backEndUrl = DATABASE_URL;
+  var catUrl = backEndUrl + 'cats/';
   var catUrlOne = catUrl + first;
-  var catUrlTwo = catUrl + second
+  var catUrlTwo = catUrl + second;
 
 
   //TO STORE Cats in browser:
