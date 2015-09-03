@@ -24,6 +24,9 @@ default: &default
 development:
   <<: *default
   database: judge_kittens_app_development
+  adapter: postgresql
+  host: localhost
+  username: lgrimes
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
