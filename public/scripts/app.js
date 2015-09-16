@@ -32,7 +32,7 @@ var second = randomIntegers.second;
 
 $(document).ready(function() {
 
-  var backEndUrl = DATABASE_URL;
+  var backEndUrl = "https://judge-the-kitties.herokuapp.com/";
   var catUrl = backEndUrl + 'cats/';
   var catUrlOne = catUrl + first;
   var catUrlTwo = catUrl + second;
